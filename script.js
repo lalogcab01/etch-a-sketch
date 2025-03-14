@@ -1,12 +1,8 @@
 function createGrid() {
-  size = getGridSize();
-  console.log(size);
-}
-function getGridSize() {
   grid.innerHTML = "";
 
-  size = prompt("Introduce the size of the grid (number of squares per side):");
-  
+  size = getGridSize();
+
   for (i = 1; i <= size; i++) {
     let row = document.createElement("div");
     row.setAttribute("class", "row");
@@ -23,6 +19,10 @@ function getGridSize() {
       // })
     }
   }
+}
+function getGridSize() {
+  size = prompt("Introduce the size of the grid (number of squares per side):");
+  return size;
 }
 
 const button = document.querySelector("button");
