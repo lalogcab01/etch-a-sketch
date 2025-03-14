@@ -21,7 +21,20 @@ function createGrid() {
   }
 }
 function getGridSize() {
-  size = prompt("Introduce the size of the grid (number of squares per side):");
+  sizeIsValid = false;
+
+  while(!sizeIsValid){
+    size = Number(prompt("Introduce the size of the grid (number of squares per side):"));
+
+    if (size <= 0) {
+      alert("INVALID SIZE: size has to be greater than 0");
+    } else if (size > 100) {
+      alert("INVALID SIZE: size has to be less than or equal to 100");
+    } else {
+      sizeIsValid = true;
+    }
+  }
+
   return size;
 }
 
