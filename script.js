@@ -8,5 +8,12 @@ for (i = 0; i < 16; i++) {
     let square = document.createElement("div");
     square.setAttribute("class", "square");
     row.appendChild(square);
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = "blue";
+    })
+    // square.addEventListener("mouseout", () => {
+    //   square.style.backgroundColor = "transparent";
+    // })
   }
 }
+
