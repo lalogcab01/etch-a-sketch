@@ -12,7 +12,9 @@ function createGrid() {
       square.setAttribute("class", "square");
       row.appendChild(square);
       square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        if (square.style.backgroundColor === "") {
+          square.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);  
+        }
       })
       // square.addEventListener("mouseout", () => {
       //   square.style.backgroundColor = "transparent";
