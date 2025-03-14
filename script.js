@@ -14,6 +14,9 @@ function createGrid() {
       square.addEventListener("mouseover", () => {
         if (square.style.backgroundColor === "") {
           square.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);  
+          square.style.opacity = "0.1";
+        } else if (parseFloat(square.style.opacity) < 1) {
+          square.style.opacity = parseFloat(square.style.opacity) + 0.1;
         }
       })
       // square.addEventListener("mouseout", () => {
